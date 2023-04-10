@@ -1,11 +1,11 @@
 import React from 'react';
 import DeleteOutlineTwoToneIcon from '@mui/icons-material/DeleteOutlineTwoTone';
-const Note = () => {
+const Note = (props) => {
   return (
     <div className='note'>
-      <h2>Title</h2>
+      <h2>{props.title}</h2>
       <br />
-      <p>this is the content</p>
+      <p>{props.content}</p>
       <DeleteOutlineTwoToneIcon className='deleteIcon' />
     </div>
   );

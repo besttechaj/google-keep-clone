@@ -1,17 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap');
+
 * {
   padding: 0%;
   margin: 0%;
   font-family: 'Times New Roman', Times, serif;
   box-sizing: border-box;
+
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .deleteIcon {
   padding-top: 5px;
+  width: 100%;
+  align-self: flex-end;
+  cursor: pointer;
 }
+
 p {
   padding: 5px;
   font-size: 1rem;
-
+  color: gray;
   font-weight: 900;
   padding-top: 15px;
   padding-bottom: 10px;
@@ -23,6 +31,7 @@ h2 {
   padding-bottom: 5px;
   margin-bottom: -20px;
   font-size: 1.2rem;
+  color: gray;
 }
 .note {
   border: 1px solid red;
@@ -102,7 +111,7 @@ img {
 }
 
 .footer {
-  /* position: fixed; */
+  position: fixed;
   bottom: 0%;
   width: 100%;
   text-align: center;
