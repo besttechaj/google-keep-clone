@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+* {
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.deleteIcon {
+  padding-top: 5px;
+}
+p {
+  padding: 5px;
+  font-size: 1rem;
+
+  font-weight: 900;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+h2 {
+  padding: 5px;
+  font-weight: 900;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  margin-bottom: -20px;
+  font-size: 1.2rem;
+}
+.note {
+  border: 1px solid red;
+  width: 20%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 50px 0px 0px 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 5.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  /* border: 3px solid blue; */
+  height: 17px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.plus_sign {
+  position: absolute;
+  bottom: -6px;
+  right: 0%;
+}
+
+input {
+  /* border: 2px solid orangered; */
+  padding: 5px;
+  font-size: 1.2rem;
+
+  font-weight: 900;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+textarea {
+  padding: 5px;
+  font-weight: 900;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 1rem;
+}
+
+form {
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 150px;
+}
+
+.main_note {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 140px;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 25px;
+  background-color: #fff;
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7); */
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  background-color: #f5ba13;
+  margin: auto -16px;
+  padding: 10px 25px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 5.5);
+}
+
+img {
+  height: 70px;
+  width: 8%;
+}
+
+.footer {
+  /* position: fixed; */
+  bottom: 0%;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  height: 30px;
+  font-weight: 900;
 }
