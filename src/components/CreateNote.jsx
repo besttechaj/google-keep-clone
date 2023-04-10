@@ -2,6 +2,16 @@ import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 const CreateNote = (props) => {
+  const [expand, setExpand] = useState(false);
+
+  const expandIt = () => {
+    setExpand(true);
+  };
+
+  const backToHide = () => {
+    setExpand(false);
+  };
+
   const [note, setNote] = useState({
     title: '',
     content: '',
@@ -35,14 +45,16 @@ const CreateNote = (props) => {
   return (
     <div className='main_note'>
       <form>
-        <input
-          name='title'
-          type='text'
-          placeholder='title'
-          autoComplete='off'
-          value={note.title}
-          onChange={InputEvent}
-        />
+        {expand ? (
+          <input
+            name='title'
+            type='text'
+            placeholder='title'
+            autoComplete='off'
+            value={note.title}
+            onChange={InputEvent}
+          />
+        ) : null}
         <textarea
           name='content'
           rows=''
@@ -50,10 +62,15 @@ const CreateNote = (props) => {
           placeholder='Write a note...'
           value={note.content}
           onChange={InputEvent}
+          onClick={expandIt}
+          onDoubleClick={backToHide}
         ></textarea>
-        <Button onClick={addEvent}>
-          <AddCircleOutlineIcon className='plus_sign' />
-        </Button>
+
+        {expand ? (
+          <Button onClick={addEvent}>
+            <AddCircleOutlineIcon className='plus_sign' />
+          </Button>
+        ) : null}
       </form>
     </div>
   );

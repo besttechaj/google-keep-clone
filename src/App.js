@@ -17,17 +17,19 @@ function App() {
     <>
       <Header />
       <CreateNote passNote={addNote} />
-
-      {addItem.map((val, index) => {
-        return (
-          <Note
-            key={index}
-            id={index}
-            title={val.title}
-            content={val.content}
-          />
-        );
-      })}
+      <div className='container'>
+        {addItem.map((val, index) => {
+          return (
+            <Note
+              key={index}
+              id={index}
+              title={val.title}
+              content={val.content}
+              setAddItem={setAddItem}
+            />
+          );
+        })}
+      </div>
 
       <Footer />
     </>
